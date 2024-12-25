@@ -1,0 +1,70 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom Styling */
+body {
+  background-color: #f9f9f9;
+  font-family: "Arial", sans-serif;
+}
+.border {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px 25px;
+}
+
+.card {
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid black;
+}
+
+.card .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+footer {
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+
+
+
+.personal-aling {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0px 60px;
+}
+
+.personal-aling img {
+  height: 130px;
+  width: 120px;
+}
+
+.tabel-col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px 10px;
+}
+.tabel-col .bor {
+  height: auto;
+  border: 2px solid #000;
+  border-radius: 12%;
+  padding: 10px 14px;
+
+  text-align: center;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
