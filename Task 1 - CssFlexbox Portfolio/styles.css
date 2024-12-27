@@ -1,9 +1,9 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+/* first setting up basic body and page layout */
 
 body {
   font-family: Arial, sans-serif;
@@ -24,6 +24,7 @@ h3 {
   text-decoration: underline; /* Optional: emphasize headings */
 }
 
+/* css for the header section and the nav bar */
 header {
   background-color: #007bff;
   color: #fff;
@@ -56,6 +57,8 @@ nav ul li a:hover {
   background-color: #003f7f;
 }
 
+/* stylling each component of the page, row and col display  */
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -84,6 +87,8 @@ nav ul li a:hover {
 .card {
   text-align: center;
 }
+
+/* Items elements in same row , styling */
 
 .card img {
   display: block;
@@ -117,6 +122,8 @@ nav ul li a:hover {
   text-align: justify;
 }
 
+/* position of the each element of the personal content */
+
 .list-group {
   list-style: none;
   padding: 0;
@@ -149,6 +156,7 @@ nav ul li a:hover {
   justify-content: space-evenly;
 }
 
+/* for the border around  */
 .bod {
   border: 1px solid #007bff;
   border-radius: 8px;
@@ -178,6 +186,8 @@ nav ul li a:hover {
   margin-bottom: 20px;
 }
 
+/* aligning element according to space and col div */
+
 .first,
 .send,
 .third {
@@ -190,6 +200,7 @@ nav ul li a:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
+/* styling each button class , and its hover feature */
 .btn {
   display: block;
   width: 100%; /* Button spans the full width */
