@@ -11,27 +11,33 @@
 </head>
 
 <body>
-<!--     defining the basic border and the container layout -->
     <div class="container py-4">
-<!-- adding the main component for each div -->
+
         <nav class="navbar navbar-expand-lg navbar-light bg-light border mb-4 gradient-custom">
             <div class="container-fluid">
-                <!-- Brand and Toggler -->
+                <!-- Brand and Toggler Section -->
                 <div class="d-flex justify-content-between align-items-center w-100">
+                    <!-- Brand Name -->
                     <a class="navbar-brand" href="#">Portpone</a>
+                    <!-- Title displayed for larger screens -->
                     <h1 class="mx-auto d-none d-lg-block fw-bold mb-0">Personal Portfolio</h1>
+                    <!-- Toggler Button for Collapsible Menu (visible on smaller screens) -->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
-                <!-- Collapsible Content -->
+
+                <!-- Collapsible Content Section -->
                 <div class="collapse navbar-collapse" id="navbarNav">
+                    <!-- Navigation Links -->
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
+                            <!-- 'News' Button with Primary Styling -->
                             <a class="nav-link btn btn-primary text-white me-2" href="#">News</a>
                         </li>
                         <li class="nav-item">
+                            <!-- 'Docs' Button with Secondary Styling -->
                             <a class="nav-link btn btn-secondary text-white me-2" href="#">Docs</a>
                         </li>
                     </ul>
@@ -40,30 +46,44 @@
         </nav>
 
 
+
         <!-- Main Content -->
         <div class="row gy-4">
             <!-- Personal Info -->
             <div class="col-md-4">
+                <!-- Column spanning 4 grid spaces on medium screens and larger -->
                 <div class="card text-center">
+                    <!-- Card component for a structured layout with centered text -->
                     <div class="card-body">
+                        <!-- Card body containing the content -->
                         <h2 class="card-title">Personal Profile</h2>
-                        <div class=""><img src="./assets/icons8-portfolio-50.png" alt=""></div>
-                        <p>I am Aman, a dedicated and ambitious developer with expertise in front-end technologies like
-                            HTML, CSS, JavaScript, and
-                            React, alongside backend experience in Django and Strapi. With a solid foundation in
-                            databases such as SQL and
-                            PostgreSQL, I have successfully delivered diverse projects that bridge technology and
-                            real-world solutions. My portfolio
-                            includes building a dynamic event calendar application, developing an IoT-enabled pollution
-                            meter to monitor air quality
-                            using Arduino, and creating a fully functional e-commerce platform using React, Strapi, and
-                            Stripe. Having completed the
-                            Metacrafters summer training program in blockchain technologies like Ethereum, Avalanche,
-                            and Polygon, I am continually
-                            expanding my skill set.</p>
+                        <!-- Title of the card -->
+                        <div class="">
+                            <!-- Placeholder for profile icon -->
+                            <img src="./assets/icons8-portfolio-50.png" alt="">
+                        </div>
+                        <!-- Profile description -->
+                        <p>
+                            I am Aman, a dedicated and ambitious developer with expertise in front-end technologies like
+                            HTML, CSS,
+                            JavaScript, and React, alongside backend experience in Django and Strapi. With a solid
+                            foundation in
+                            databases such as SQL and PostgreSQL, I have successfully delivered diverse projects that
+                            bridge
+                            technology and real-world solutions. My portfolio includes building a dynamic event calendar
+                            application,
+                            developing an IoT-enabled pollution meter to monitor air quality using Arduino, and creating
+                            a fully
+                            functional e-commerce platform using React, Strapi, and Stripe. Having completed the
+                            Metacrafters summer
+                            training program in blockchain technologies like Ethereum, Avalanche, and Polygon, I am
+                            continually
+                            expanding my skill set.
+                        </p>
                     </div>
                 </div>
             </div>
+
 
             <!-- Profile Section -->
             <div class="col-md-4">
@@ -115,32 +135,62 @@
             <!-- Personal Content -->
             <div class="col-md-4">
                 <div class="card">
+                    <!-- A card component for consistent styling -->
                     <div class="card-body">
+                        <!-- Card body containing the main content -->
                         <h2 class="card-title text-center">Personal Content</h2>
+                        <!-- Title of the section, centered -->
                         <ul class="list-group">
-                            <div class=" list-group-item gap-2 mt-2">
+                            <!-- List group for structured content -->
+
+                            <!-- Section 1: About Me -->
+                            <div class="list-group-item gap-2 mt-2">
+                                <!-- List group item with gap for spacing and margin-top -->
                                 <button class="btn btn-success">About Me</button>
+                                <!-- Button for "About Me" functionality -->
                                 <li>Web Dev</li>
+                                <!-- Skill listed -->
                                 <li>Block chain dev</li>
+                                <!-- Skill listed -->
                                 <li>Content writer</li>
+                                <!-- Skill listed -->
                                 <li>Project Manager</li>
-                            </div>
-                            <div class="list-group-item gap-5 mt-1"><button class="btn btn-primary">Contact us</button>
-                                <li>phone: 9142741222</li>
-                                <li>github: https://github.com/Aman-Kumar778</li>
-                                <li>linked in: https://LinkedIn.com/Aman-Kumar778</li>
-                                <li>FaceBook: https://Facebook.com</li>
-                            </div>
-                            <div class="list-group-item"><strong>Hobbies</strong>
-                                <li>Cricket</li>
-                                <li>Chess</li>
-                                <li>Video Games</li>
-                                <!-- <li>Video editing</li> -->
+                                <!-- Skill listed -->
                             </div>
 
+                            <!-- Section 2: Contact Information -->
+                            <div class="list-group-item gap-5 mt-1">
+                                <!-- List group item for contact details -->
+                                <button class="btn btn-primary">Contact us</button>
+                                <!-- Button for "Contact Us" functionality -->
+                                <li>phone: 9142741222</li>
+                                <!-- Contact phone number -->
+                                <li>github: https://github.com/Aman-Kumar778</li>
+                                <!-- GitHub profile link -->
+                                <li>linked in: https://LinkedIn.com/Aman-Kumar778</li>
+                                <!-- LinkedIn profile link -->
+                                <li>FaceBook: https://Facebook.com</li>
+                                <!-- Facebook profile link -->
+                            </div>
+
+                            <!-- Section 3: Hobbies -->
+                            <div class="list-group-item">
+                                <!-- List group item for hobbies -->
+                                <strong>Hobbies</strong>
+                                <!-- Title for hobbies section -->
+                                <li>Cricket</li>
+                                <!-- Hobby listed -->
+                                <li>Chess</li>
+                                <!-- Hobby listed -->
+                                <li>Video Games</li>
+                                <!-- Hobby listed -->
+                                <!-- <li>Video editing</li> -->
+                                <!-- Commented-out hobby -->
+                            </div>
                         </ul>
                     </div>
                 </div>
+
             </div>
 
             <!-- Basic Info Section -->
