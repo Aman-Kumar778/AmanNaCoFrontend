@@ -1,4 +1,5 @@
-// Selecting elements
+// Selecting elements 
+// and define the variabel fo each function on the html page
 const addButton = document.getElementById("addButton");
 const itemInput = document.getElementById("itemInput");
 const todoList = document.querySelector(".list-container .list:first-child");
