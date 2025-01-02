@@ -34,6 +34,7 @@ body {
   text-align: center; /* Center-align text for smaller views */
 }
 
+/* Styling for the input field to ensure it is user-friendly, responsive, and visually appealing */
 #itemInput {
   padding: 10px;
   font-size: 16px;
@@ -43,6 +44,7 @@ body {
   border-radius: 5px;
 }
 
+/* Button to add items, with a bold, modern design and hover effect for interactivity */
 #addButton {
   padding: 10px 15px;
   margin-left: 10px;
@@ -56,9 +58,10 @@ body {
 }
 
 #addButton:hover {
-  background-color: #5e27a6;
+  background-color: #5e27a6; /* Provides visual feedback on hover */
 }
 
+/* Container for lists to organize content flexibly and maintain responsive layout */
 .list-container {
   display: flex;
   flex-wrap: wrap;
@@ -68,6 +71,7 @@ body {
   gap: 20px;
 }
 
+/* Individual list styling to create distinct, bordered sections for items */
 .list {
   flex: 1;
   min-width: 250px;
@@ -78,16 +82,19 @@ body {
   box-sizing: border-box;
 }
 
+/* Styling for each list item to make them prominent and interactive */
 .list-item {
   margin-bottom: 10px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
 }
+
 .list-item:hover {
-  background-color: yellowgreen;
+  background-color: yellowgreen; /* Highlights items on hover for better visibility */
 }
 
+/* Container for control buttons, arranged vertically with consistent spacing */
 .buttons {
   display: flex;
   flex-direction: column;
@@ -96,6 +103,7 @@ body {
   gap: 10px;
 }
 
+/* Styling for action buttons (e.g., move buttons) with consistent design and hover effect */
 .move-button {
   padding: 10px 20px;
   font-size: 14px;
@@ -108,9 +116,10 @@ body {
 }
 
 .move-button:hover {
-  background-color: #5e27a6;
+  background-color: #5e27a6; /* Darker shade on hover for interactivity */
 }
 
+/* Title styling for lists to ensure clear sectioning and emphasize list purpose */
 .list-title {
   margin-bottom: 10px;
   font-size: 18px;
