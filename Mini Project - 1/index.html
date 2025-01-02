@@ -10,28 +10,38 @@
 
 <body>
 
-
+    <!-- defining the outer container size of all div element -->
     <div class="container">
-
+        <!-- class to change text during responsiveness -->
         <div class="topele">
             <h1>Welcome to JavaScript Project</h1>
         </div>
+
+        <!-- input and add funciton -->
         <div class="smalldiv">
-            <input   type="text" id="itemInput" placeholder="Item Name">
-            <button  id="addButton">ADD ITEM</button>
+            <input type="text" id="itemInput" placeholder="Item Name">
+            <button id="addButton">ADD ITEM</button>
         </div>
+
+        <!-- list for the to do list -->
         <div class="list-container">
             <div class="list">
                 <div class="list-title bot">To-Do List</div>
                 <div class="list-item ">Apple</div>
+                <!-- adding class for getting the selection effect -->
                 <div class="list-item">Mango</div>
                 <div class="list-item">Banana</div>
             </div>
+            <!-- button functionality for seding items  -->
             <div class="buttons">
+                <!-- adding different class for different text and function during JS  -->
                 <button class="move-button first">MOVE TO RIGHT ></button>
                 <button class="move-button second">
                     < MOVE TO LEFT</button>
             </div>
+
+
+            <!-- Final list of the selected items -->
             <div class="list">
                 <div class="list-title">Complete List</div>
                 <div class="list-item">Guava</div>
@@ -39,7 +49,7 @@
             </div>
         </div>
     </div>
-
+    <!-- including the javascript function -->
     <script src="function.js"></script>
 </body>
 
