@@ -137,6 +137,24 @@ body {
   border: 1px solid #38a169; /* Optional: Green border */
 }
 
+/* remove button stylr */
+#removeButton {
+    margin-left: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#removeButton:hover {
+    background-color: #e60000;
+}
+
+
 @media (max-width: 768px) {
   #itemInput {
     width: 70%;
