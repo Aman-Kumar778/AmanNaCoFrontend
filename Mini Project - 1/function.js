@@ -9,6 +9,50 @@ document.addEventListener("DOMContentLoaded", () => {
   const moveButtons = document.querySelectorAll(".move-button");
   const removeButton = document.getElementById("removeButton");
 
+  let undoStack = []; // Stack to hold removed items for undo
+
+  // Function to show toast notification with optional undo
+  const showToast = (message, undoCallback = null) => {
+    const toast = document.createElement("div");
+    toast.className = "toast";
+    toast.textContent = message;
+
+    if (undoCallback) {
+      const undoButton = document.createElement("button");
+      undoButton.textContent = "UNDO";
+      undoButton.className = "undo-button";
+      undoButton.addEventListener("click", () => {
+        undoCallback();
+        toast.remove();
+      });
+      toast.appendChild(undoButton);
+
+      // Progress bar for undo
+      const progressBar = document.createElement("div");
+      progressBar.className = "progress-bar";
+      toast.appendChild(progressBar);
+
+      let width = 100;
+      const interval = setInterval(() => {
+        width -= 1;
+        progressBar.style.width = width + "%";
+        if (width <= 0) {
+          clearInterval(interval);
+          toast.remove();
+        }
+      }, 50); // 5 seconds total (100 * 50ms)
+    }
+
+    document.body.appendChild(toast);
+
+    // Auto-remove toast after 5 seconds if undo is not clicked
+    if (!undoCallback) {
+      setTimeout(() => {
+        toast.remove();
+      }, 3000);
+    }
+  };
+
   // Function to save items to localStorage
   const saveToLocalStorage = () => {
     const getItems = (list) =>
@@ -59,44 +103,55 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to add an item to the To-Do List
   addButton.addEventListener("click", () => {
     const itemText = itemInput.value.trim();
-    if (itemText) {
-      const newItem = document.createElement("div");
-      newItem.className = "list-item";
-      newItem.textContent = itemText;
-
-      // Attach toggleSelection event
-      newItem.addEventListener("click", toggleSelection);
-      todoList.appendChild(newItem);
-      itemInput.value = ""; // Clear input field
-      saveToLocalStorage();
+    if (!itemText) {
+      return; // Ignore empty input
     }
+
+    const checkDuplicate = Array.from(
+      document.querySelectorAll(".list-item")
+    ).some((item) => item.textContent === itemText);
+
+    if (checkDuplicate) {
+      showToast("Item already exists. You cannot add it again.");
+      return;
+    }
+
+    const newItem = document.createElement("div");
+    newItem.className = "list-item";
+    newItem.textContent = itemText;
+
+    newItem.addEventListener("click", toggleSelection);
+    todoList.appendChild(newItem);
+    itemInput.value = "";
+    saveToLocalStorage();
+    showToast("Item is added to the To-Do List.");
   });
 
   // Function to move items between lists
   moveButtons[0].addEventListener("click", () => {
-    // Move to the right (Complete List)
     const selectedItems = Array.from(
       todoList.querySelectorAll(".list-item.selected")
     );
     selectedItems.forEach((item) => {
       todoList.removeChild(item);
       completeList.appendChild(item);
-      item.classList.remove("selected"); // Deselect the item after moving
+      item.classList.remove("selected");
     });
     saveToLocalStorage();
+    showToast("Item(s) moved to the Complete List!");
   });
 
   moveButtons[1].addEventListener("click", () => {
-    // Move to the left (To-Do List)
     const selectedItems = Array.from(
       completeList.querySelectorAll(".list-item.selected")
     );
     selectedItems.forEach((item) => {
       completeList.removeChild(item);
       todoList.appendChild(item);
-      item.classList.remove("selected"); // Deselect the item after moving
+      item.classList.remove("selected");
     });
     saveToLocalStorage();
+    showToast("Item(s) moved to the To-Do List!");
   });
 
   // Function to remove selected items
@@ -104,8 +159,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const selectedItems = Array.from(
       document.querySelectorAll(".list-item.selected")
     );
+
+    if (selectedItems.length === 0) {
+      showToast("No items selected to remove.");
+      return;
+    }
+
+    undoStack = selectedItems.map((item) => {
+      return {
+        element: item,
+        parent: item.parentElement,
+      };
+    });
+
     selectedItems.forEach((item) => item.remove());
     saveToLocalStorage();
+
+    showToast("Item(s) removed successfully!", () => {
+      // Undo action
+      undoStack.forEach(({ element, parent }) => {
+        parent.appendChild(element);
+        element.classList.remove("selected");
+      });
+      undoStack = [];
+      saveToLocalStorage();
+    });
   });
 
   // Update heading text based on window size
