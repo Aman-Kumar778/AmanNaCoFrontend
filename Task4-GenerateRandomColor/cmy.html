@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Models</title>
+    <link rel="stylesheet" href="./css/style1.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div>Color Models</div>
+        <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+    
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="rgb.html">RGB</a>
+            <a href="cmy.html">CMYK</a>
+            <a href="web-safe-colors.html">Web safe Colors</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="section-heading"><span class="cyan-word">Cyan</span> <span class="Mag-word">Magenta</span> <span
+                class="yelow-word">Yellow</span> (<span class="cmy-heading">CMY</span>)</div>
+
+        <div class="rgb-container">
+            <!-- Left Section -->
+            <div class="info">
+                <h2><span class="cyan-word">Cyan</span> <span class="Mag-word">Magenta</span> <span
+                        class="yelow-word">Yellow</span> (<span class="cmy-heading">CMY</span>)</h2>
+                <p class="info-gap">
+                    <b><span class="cmy-heading">CMY</span>K</b> is an subtractive reflected light color model.where
+                    each color is stored in one byte.
+                    <br>
+                    <br>
+                    All possible combinations of <b><span class="cmy-heading">CMY</span>K</b> or <b><span
+                            class="cyan-word">Cyan</span> <span class="Mag-word">Magenta</span> <span
+                            class="yelow-word">Yellow</span> and Key(Black)</b> give
+                    2<sup>32</sup> = 4,294,967,296
+                    different
+                    colors.
+                    <br>
+                    <br>
+                    Starting with <b>White</b> (color), to which different color <b>inks</b> are
+                    added
+                    to <b>absorb(subtract)</b> light that is reflected.
+                </p>
+            </div>
+
+            <!-- Right Section -->
+            <div class="info">
+                <h2><span class="cyan-word">Cyan</span> <span class="Mag-word">Magenta</span> <span
+                        class="yelow-word">Yellow</span> (<span class="cmy-heading">CMY</span>)</h2>
+                <div class="select-title-container">
+                    <span class="select-title"><b>Select <span class="cmy-heading">CMY</span>Values:</b></span>
+                </div>
+
+                <div class="rgb-row">
+                    <div class="rgb-item">
+                        <label for="red"><span class="cyan-word">Cyan:</span></label>
+                        <select id="cyann" class="cmy-select"></select>
+                    </div>
+                    <div class="rgb-item">
+                        <label for="green"><span class="Mag-word">Magenta:</span></label>
+                        <select id="Magentaa" class="cmy-select"></select>
+                    </div>
+                    <div class="rgb-item">
+                        <label for="blue"><span class="yelow-word">Yellow:</span></label>
+                        <select id="Yelloww" class="cmy-select"></select>
+                    </div>
+                </div>
+
+                <div class="button-row">
+                    <span class="button-text"><span class="cmy-heading">CMY</span> Float Values</span>
+                    <span class="button-text"><span class="cmy-heading">CMY</span> Hexadecimal Values</span>
+                    <span class="button-text">Display</span>
+                </div>
+                <div class="button-row ccc top">
+                    <span class="button-text" id="cmy-float">(0.00,0.00,0.00)</span>
+                    <span class="button-text" id="cmy-hex">#000000</span>
+                    <span class="button-text" id="color-display"></span>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025. Aman Kumar. All rights reserved.
+    </footer>
+    <script src="./js/functt.js"></script>
+</body>
+
+</html>

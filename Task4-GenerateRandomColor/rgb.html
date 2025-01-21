@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Models</title>
+    <link rel="stylesheet" href="./css/style1.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <!-- Header -->
+    <header>
+        <div>Color Models</div>
+        <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+    
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="rgb.html">RGB</a>
+            <a href="cmy.html">CMYK</a>
+            <a href="web-safe-colors.html">Web safe Colors</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="section-heading"><span class="red-word">Red</span> <span class="green-word">Green</span> <span
+                class="blue-word">Blue</span> (<span class="rgb-heading">RGB</span>)</div>
+
+        <div class="rgb-container">
+            <!-- Left Section -->
+            <div class="info">
+                <h2><span class="red-word">Red</span> <span class="green-word">Green</span> <span
+                        class="blue-word">Blue</span> (<span class="rgb-heading">RGB</span>)</h2>
+                <p class="info-gap">
+                    <span class="red-word">Red</span>, <span class="green-word">Green</span>, and <span
+                        class="blue-word">Blue</span> are the components of an
+                    <b>additive color projected light color model</b> where each color is stored in <b>one
+                        byte</b>.
+                    <br><br>
+                    All possible combinations of <b><span class="red-word">Red</span>, <span
+                            class="green-word">Green</span>,</b> and <b><span class="blue-word">Blue</span></b> give
+                    2<sup>24</sup> = 16,777,216
+                    different
+                    colors.
+                    <br><br>
+                    Starting with <b>(<span class="red-word">Red</span>, <span class="green-word">Green</span>, <span
+                            class="blue-word">Blue</span>) = (<span class="zeroCol">0</span> )</b> (black), to which
+                    different
+                    color "lights" are
+                    <b>added</b> to produce visible colors.
+                </p>
+            </div>
+
+            <!-- Right Section -->
+            <div class="info info22">
+                <h2><span class="red-word">Red</span> <span class="green-word">Green</span> <span
+                        class="blue-word">Blue</span> (<span class="rgb-heading">RGB</span>)</h2>
+                <div class="select-title-container">
+                    <span class="select-title"><b>Select <span class="rgb-heading">RGB</span> Values:</b></span>
+                </div>
+
+                <div class="rgb-row">
+                    <div class="rgb-item">
+                        <label for="red"><span class="red-word">Red:</span></label>
+                        <select id="red" class="rgb-select" onchange="updateColor()"></select>
+                    </div>
+                    <div class="rgb-item">
+                        <label for="green"><span class="green-word">Green:</span></label>
+                        <select id="green" class="rgb-select" onchange="updateColor()"></select>
+                    </div>
+                    <div class="rgb-item">
+                        <label for="blue"><span class="blue-word">Blue:</span></label>
+                        <select id="blue" class="rgb-select" onchange="updateColor()"></select>
+                    </div>
+                </div>
+
+                <div class="button-row">
+                    <span class="button-text"><span class="rgb-heading">RGB</span> Float Values</span>
+                    <span class="button-text"><span class="rgb-heading">RGB</span> Hexadecimal Values</span>
+                    <span class="button-text">Display</span>
+                </div>
+                <div class="button-row ccc top">
+                    <span class="button-text ttt" id="rgb-float">(0.00, 0.00, 0.00)</span>
+                    <span class="button-text ttt" id="rgb-hex">#000000</span>
+                    <span class="button-text ttt" id="color-display"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="generate-container button">
+            <button>Generate Random Colors</button>
+            <div class="colors-container"></div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025. Aman Kumar. All rights reserved.
+    </footer>
+    <script src="./js/functt.js"></script>
+</body>
+
+</html>
