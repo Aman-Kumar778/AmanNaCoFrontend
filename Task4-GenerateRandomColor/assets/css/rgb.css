@@ -1,0 +1,180 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 50px;
+  background-color: #7b1f45;
+  color: white;
+  padding: 10px 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header div {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.models {
+  display: flex;
+  justify-content: space-around;
+}
+
+.model {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 45%;
+}
+
+.model h2 {
+  color: #6c214e;
+  margin-bottom: 10px;
+}
+
+.model p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* RGB Container */
+.rgb-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+  margin: 20px auto;
+  width: 80%;
+}
+
+/* Both Sections */
+.rgb-container .info {
+  flex: 1; /* Equal width for both sections */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+/* Titles */
+.rgb-container .info h2 {
+  margin: 0;
+  padding: 15px;
+  font-size: 1.5rem;
+  color: #6c214e; /* Dark purple */
+  background-color: #fdecec; /* Light pink for left heading */
+  text-align: center;
+}
+
+/* Left Section Styling */
+.rgb-container .info:first-child h2 {
+  background-color: #fdecec; /* Light pink */
+}
+
+/* Right Section Styling */
+.rgb-container .info:last-child h2 {
+  background-color: #e6f4ea; /* Light green */
+}
+
+/* Paragraphs */
+.rgb-container .info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 15px;
+  flex-grow: 1;
+}
+
+
+/* Input Fields */
+.rgb-container .info input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Ensure Equal Heights */
+.rgb-container .info {
+  height: 100%; /* Set equal heights */
+}
+
+
+
+
+.generate-container button {
+  background-color: #6c214e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.generate-container button:hover {
+  background-color: #521637;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* Styling for the text in a row */
+.button-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  background-color: #e6f4fa; /* Light blue background */
+  padding: 10px 0;
+  border-bottom: 3px solid #6c214e; /* Secondary border at the bottom */
+  border-radius: 5px;
+}
+
+.button-row .button-text {
+  font-size: 1rem;
+  color: #6c214e; /* Matching button color */
+  font-weight: bold;
+  cursor: pointer; /* Add hover effect */
+  text-decoration: none;
+}
+
+.button-row .button-text:hover {
+  text-decoration: underline; /* Underline on hover */
+}

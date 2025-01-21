@@ -1,0 +1,336 @@
+/* General Reset */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  height: 50px;
+  background-color: #7b1f45;
+  color: white;
+  padding: 10px 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header nav {
+  display: flex;
+  gap: 10px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.Top {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+/* Main Content */
+main {
+  width: 80%;
+  /* height: 60vh; */
+  margin: 20px auto;
+  border: 2px solid #3c6e96; /* Blue border */
+  border-radius: 5px;
+  text-align: center;
+}
+
+.section-heading {
+  background-color: #daeaf5; /* Light blue */
+  height: auto; /* Allow dynamic height */
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  color: #2a4d69; /* Dark blue */
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.models {
+  display: flex;
+  justify-content: space-around; /* Space between the models */
+  flex-wrap: wrap; /* Wrap models if the screen is narrow */
+  margin-top: 20px; /* Space above models */
+}
+
+.model {
+  flex: 1 1 45%; /* Responsive sizing for models */
+  text-align: left;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  height: auto;
+}
+
+.model h2 {
+  font-size: 24px; /* Slightly smaller font for headings */
+  text-decoration: underline dotted;
+  font-weight: bold;
+  color: #000;
+}
+
+.model p {
+  font-size: 20px; /* Adjusted font size for better balance */
+  font-weight: bold;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* Responsive style for the hamberger effect */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    background: #7b1f45;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  nav.active {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .models {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .model {
+    flex: 1 1 100%;
+    text-align: center;
+    height: auto;
+  }
+}
+
+/* style for the web safe colours page */
+.first h1 {
+  margin: auto;
+  padding: 16px 20px;
+  text-align: start;
+  background-color: #daeaf5;
+  color: #2a4d69;
+}
+
+.first p {
+  margin: auto;
+  padding: 10px 16px;
+  text-align: start;
+  line-height: 1.5rem;
+}
+.second h2 {
+  color: #2a4d69;
+  text-align: start;
+  padding: 0 15px;
+}
+.second p{
+  margin: auto;
+  padding: 8px 13px;
+  text-align: start;
+  line-height: 1.1rem;
+}
+
+.second ul {
+  text-align: start;
+  list-style-type: none; /* Remove the dot symbols */
+  margin: 0;
+  padding: 0 0 0 20px; /* Align with the h2 heading */
+}
+
+.second ul li {
+  margin-bottom: 10px; /* Add spacing between list items */
+  font-size: 1rem; /* Adjust text size */
+  color: #555; /* Customize the text color */
+}
+
+.generate2-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns the button to the right */
+  align-items: flex-start;
+  margin-bottom: 10px; /* Aligns the button higher */
+}
+
+.generate2-container button {
+  background-color: #6c214e;
+  color: white;
+  padding: 12px 24px; /* Adds more padding for a larger button */
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-right: 10px;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow for a polished look */
+}
+
+.generate2-container button:hover {
+  background-color: #521637;
+  transform: scale(1.05); /* Optional: Adds a slight zoom effect on hover */
+}
+
+#color-display-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  margin: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.color-box {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.color-box div {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Color Display Container Styling */
+#color2-display-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+#display_web_safe_color {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Color Box Styling */
+.box_display_web_safe_color {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f0f0f0; /* Default background, overwritten by JS */
+  color: #d8c5c5; /* Text color for better visibility */
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-height: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #display_web_safe_color {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+
+  .box_display_web_safe_color {
+    font-size: 0.7rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  #display_web_safe_color {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  }
+
+  .box_display_web_safe_color {
+    font-size: 0.6rem;
+    padding: 5px;
+  }
+}
+
+/* for the contact page  */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(82, 81, 81);
+  padding: 21px;
+  border-radius: 10px;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon img {
+  width: 70px;
+  height: 70px;
+}
+
+.icon span {
+  margin-top: 8px;
+  font-size: 20px;
+  color: #333;
+}
+
+.contact-info {
+  text-align: center;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: #555;
+}

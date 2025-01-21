@@ -1,0 +1,337 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 50px;
+  background-color: #7b1f45;
+  color: white;
+  padding: 10px 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+header nav {
+  display: flex;
+  gap: 10px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.models {
+  display: flex;
+  justify-content: space-around;
+}
+
+.model {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 45%;
+}
+
+.model h2 {
+  color: #6c214e;
+  margin-bottom: 10px;
+}
+
+.model p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* RGB Container */
+.rgb-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+  margin: 20px auto;
+  width: 80%;
+}
+
+/* Both Sections */
+.rgb-container .info {
+  flex: 1; /* Equal width for both sections */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.info-gap {
+  padding: 8px 20px;
+}
+
+/* Titles */
+.rgb-container .info h2 {
+  margin: 0;
+  padding: 15px;
+  font-size: 1.5rem;
+  color: #691a4a; /* Dark purple */
+  background-color: #fdecec; /* Light pink for left heading */
+  text-align: center;
+}
+
+/* Left Section Styling */
+.rgb-container .info:first-child h2 {
+  background-color: #fee4e4; /* Light pink */
+}
+
+/* Right Section Styling */
+.rgb-container .info:last-child h2 {
+  background-color: #9adfae; /* Light green */
+}
+
+/* Input Fields */
+.rgb-container .info input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Ensure Equal Heights */
+.rgb-container .info {
+  height: 100%; /* Set equal heights */
+}
+
+/* Updated Select Title Container */
+.select-title-container {
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  font-size: 1.2rem; /* Slightly larger text */
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Updated RGB Row */
+.rgb-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 20px; /* Added padding */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rgb-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rgb-item label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.generate-container {
+  display: flex;
+  flex-direction: column; /* Stack button and colors container vertically */
+  align-items: center;
+  gap: 20px; /* Add some space between the button and the colors */
+  max-width: 600px; /* Restrict the overall width of the container */
+  margin: auto; /* Center the container horizontally */
+}
+
+.generate-container button {
+  background-color: #6c214e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.generate-container button:hover {
+  background-color: #521637;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* Styling for the text in a row */
+.button-row {
+  display: flex;
+  /* height: px; */
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  background-color: #e6f4fa;
+  padding: 10px 0;
+}
+
+.top {
+  border-top: 1px solid peru;
+  /* justify-content: space-evenly; */
+}
+.ccc {
+  display: flex;
+  justify-content: space-around;
+  text-align: start;
+  gap: 60px;
+}
+#color-display {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-color: #000000;
+  border: 1px solid #000;
+  vertical-align: middle;
+}
+
+.button-row .button-text {
+  font-size: 1rem;
+  color: #6c214e; /* Matching button color */
+  font-weight: bold;
+  cursor: pointer; /* Add hover effect */
+  text-decoration: none;
+}
+
+.button-row .button-text:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.colors-container {
+  width: 100%; /* Ensures the color rows don't affect button width */
+}
+.generate-container button {
+  flex-shrink: 0; /* Prevents resizing */
+}
+
+.colors-container div {
+  display: flex;
+  justify-content: space-between; /* Align items within the row compactly */
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.colors-container div > div {
+  flex: 1; /* Evenly distribute space between items */
+  text-align: center; /* Center the text inside the div */
+}
+
+/* Responsive style for the hamberger effect */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    background: #7b1f45;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  nav.active {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .models {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .model {
+    flex: 1 1 100%;
+    text-align: center;
+    height: auto;
+  }
+}
+
+/* Responsive styles for the rgb-container */
+@media (max-width: 768px) {
+  .rgb-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .info22 .rgb-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+  }
+
+  .rgb-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rgb-item {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .button-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    padding: 5px 0;
+  }
+
+  .button-row .button-text .ttt {
+    gap: 60px;
+
+  }
+}
