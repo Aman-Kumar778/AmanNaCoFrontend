@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coloshop-Home</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="./assets/css/Index.css" />
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">COLOSHOP</div>
+        <input type="text" placeholder="Search products..." class="search-bar" />
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./category.html">Categories</a></li>
+                <li><a href="./cart.html">Cart</a></li>
+                <span id="cart-count" class="cart-count">0</span>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+        </nav>
+        <!-- Hamburger Menu for Smaller Screens -->
+        <div id="menu_container">
+            <div id="hamburger">☰</div>
+            <div id="hamburger_navbar_links">
+                <a href="./index.html">Home</a>
+                <a href="./category.html">Categories</a>
+                <a href="./cart.html">Cart</a>
+                <a href="./login.html">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <div id="bread-crumb">
+        <a href="./index.html"> Home</a>
+    </div>
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Welcome to COLOSHOP</h1>
+            <p>Spring / Summer Collection 2025</p>
+            <button>Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section class="products">
+        <h2>Featured Products</h2>
+        <hr>
+        <div class="product-grid" id="product-grid">
+            <!-- Products will be populated here dynamically -->
+        </div>
+    </section>
+    <!-- Single Product View Section -->
+    <section class="single-product-view" id="single-product-view">
+        <img id="single-product-image" src="" alt="" />
+        <h2 id="single-product-title"></h2>
+        <p id="single-product-category"></p>
+        <p id="single-product-description"></p>
+        <p>
+            <strong>Price: $<span id="single-product-price"></span></strong>
+
+        </p>
+        <button onclick="addToCartSingleProduct()">Add to Cart</button>
+        <button onclick="showProductGrid()">Back to Products</button>
+    </section>
+
+    <!-- Toaster Section -->
+    <div class="toaster" id="toaster"></div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Contact Us For Any Custom Products and Features</p>
+        <p>Terms & Service With Privacy Involved</p>
+        <p>&copy; 2025 COLOSHOP - Aman Kumar. All Rights Reserved.</p>
+    </footer>
+
+    <script src="./assets/js/Final.js"></script>
+</body>
+
+</html>
